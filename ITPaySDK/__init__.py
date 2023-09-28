@@ -1,6 +1,4 @@
-from .ITPay import ITPayAPI
-from .enums import Currency, PaymentType
-from .exceptions import ITPayStatusException
+from .ITPay import ITPayAPI, ITPayStatusException, Currency, PaymentType
 
 __all__ = [
     "ITPay",

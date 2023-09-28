@@ -2,8 +2,8 @@ import aiohttp
 from types import NoneType
 from typing import Optional
 
-from ITPaySDK import ITPayStatusException
-from enums import Currency, PaymentType
+from .exceptions import ITPayStatusException
+from .enums import Currency, PaymentType
 
 
 class ITPayAPI:

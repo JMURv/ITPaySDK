@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "itpaysdk"
-version = "0.2.0"
+version = "0.2.1"
 description = ""
 authors = ["JMURv <architect.lock@outlook.com>"]
 readme = "README.md"
