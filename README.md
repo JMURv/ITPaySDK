@@ -1,5 +1,4 @@
 ## Package for an [ITPay](https://itpay.app) API
-___
 
 ## About
 Just a small but powerful package-wrapper for an [ITPay](https://itpay.app) API
@@ -14,7 +13,7 @@ Official docs can be found here on the [APIs webpage](https://itpay.app/merchant
 `pip install itpaysdk`
 
 ## Requirements
-- Python 3.7
+- Python 3.11
 - aiohttp
 
 ## Features
