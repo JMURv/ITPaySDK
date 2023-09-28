@@ -43,7 +43,7 @@ class ITPayAPI:
             description: Optional[str] = None,
             type: Optional[PaymentType] = None,
             currency_in: Optional[Currency] = None,
-            payer_pays_commission: Optional[int] = None
+            payer_pays_commission: Optional[bool] = None
     ) -> dict:
         """
         Create payment bill
@@ -54,7 +54,7 @@ class ITPayAPI:
         If you select a one-time payment, you will not be able to pay a second time
         :param Optional[Currency] currency_in: Currency in which the invoice is paid.
         If not transferred, then the store currency is used
-        :param Optional[int] payer_pays_commission: Who pays the commission. 1 or 0
+        :param Optional[bool] payer_pays_commission: Who pays the commission. 1 or 0
         :return dict: API Response
         """
         payload = {
@@ -71,7 +71,7 @@ class ITPayAPI:
         if currency_in is not None:
             payload["currency_in"] = currency_in.value
         if payer_pays_commission is not None:
-            payload["payer_pays_commission"] = payer_pays_commission
+            payload["payer_pays_commission"] = 1 if payer_pays_commission is True else 0
 
         return await self._send_request(
             endpoint="bill/create",
